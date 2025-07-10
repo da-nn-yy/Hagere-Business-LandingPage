@@ -1,8 +1,9 @@
 "use client";
+
 import { Element } from "react-scroll";
-import Image from "next/image";
-import { links, logos } from "@/app/constants";
+import { links, logos } from "@/app/constants/index.js";
 import Marker from "@/app/components/Marker";
+import Image from "next/image";
 
 const Download = () => {
   return (
@@ -13,20 +14,22 @@ const Download = () => {
       >
         <div className="container">
           <div className="flex items-center">
-            <div className="relative mr-6 flex-540 max-xl:flex-280 max-lg:flex-256 max-md:flex-100">
+            <div className="relative mr-6 flex-540 max-xl:flex-280 max-lg:flex256 max-md:flex-100">
               <div className="mb-10">
                 <Image
-                  src={"./images/xora.svg"}
-                  alt="hagere"
+                  src={"/images/xora.svg"}
                   width={160}
                   height={55}
+                  alt="hagere"
                   unoptimized
                 />
               </div>
+
               <p className="body-1 mb-10 max-w-md">
-                Try it now for free on Android, iOS,PC, Web - whatever your
-                flavor, we've got you covered.
+                Try it now for free on Android, iOS, PC, Web - whatever your
+                flavor, we have got you covered.
               </p>
+
               <ul className="flex flex-wrap items-center gap-6">
                 {links.map(({ id, url, icon }) => (
                   <li
@@ -35,18 +38,17 @@ const Download = () => {
                   >
                     <a
                       href={url}
-                      className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-border-color duration-500"
+                      className="size-22 download_tech-icon_before relative flex items-center justify-center rounded-half border-2 border-s3 bg-s1 transition-borderColor duration-500"
                     >
                       <span className="absolute -top-2 rotate-90">
                         <Marker />
                       </span>
                       <Image
-                        src={"./images/lines.svg"}
+                        src={"/images/lines.svg"}
                         alt="lines"
-                        width={160}
+                        width={50}
                         height={50}
                         className="absolute size-13/20 object-contain"
-                        unoptimized
                       />
                       <span className="download_tech-icon">{icon}</span>
                     </a>
@@ -61,11 +63,12 @@ const Download = () => {
                   <span className="download_preview-dot left-6 bg-p2" />
                   <span className="download_preview-dot left-11 bg-s3" />
                   <span className="download_preview-dot left-16 bg-p1/15" />
+
                   <Image
                     src="/images/screen.jpg"
-                    alt="screen"
                     width={855}
                     height={655}
+                    alt="screen"
                     className="rounded-xl"
                     unoptimized
                   />
@@ -76,13 +79,7 @@ const Download = () => {
           <ul className="mt-24 flex justify-center max-lg:hidden">
             {logos.map(({ id, url, width, height, title }) => (
               <li key={id} className="mx-10">
-                <Image
-                  src={url}
-                  width={width}
-                  height={height}
-                  alt={title}
-                  unoptimized
-                />
+                <Image src={url} width={width} height={height} alt={title} />
               </li>
             ))}
           </ul>
