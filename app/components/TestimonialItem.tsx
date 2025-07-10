@@ -2,7 +2,12 @@ import clsx from "clsx";
 import Image from "next/image";
 
 interface testimonialProps {
-  item: string;
+  item: {
+    name: string;
+    role: string;
+    comment: string;
+    avatarUrl: string;
+  };
   containerClassName: string;
 }
 const TestimonialItem = ({ item, containerClassName }: testimonialProps) => {
