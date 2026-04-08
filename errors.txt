@@ -1,0 +1,6 @@
+app/components/Button.tsx(27,19): error TS2322: Type '{ markerFill: string | undefined; }' is not assignable to type 'IntrinsicAttributes & MarkerProps'.
+  Property 'markerFill' does not exist on type 'IntrinsicAttributes & MarkerProps'.
+app/components/FaqItems.tsx(18,36): error TS2339: Property 'id' does not exist on type 'FaqItemQuestion'.
+app/components/FaqItems.tsx(24,41): error TS2339: Property 'id' does not exist on type 'FaqItemQuestion'.
+app/components/FaqItems.tsx(24,58): error TS2339: Property 'id' does not exist on type 'FaqItemQuestion'.
+app/components/FaqItems.tsx(53,28): error TS2339: Property 'id' does not exist on type 'FaqItemQuestion'.

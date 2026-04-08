@@ -6,6 +6,7 @@ import { SlideDown } from "react-slidedown";
 import "react-slidedown/lib/slidedown.css";
 
 interface FaqItemQuestion {
+  id: string;
   question: string;
   answer: string;
 }
@@ -14,7 +15,7 @@ interface FaqItemProps {
   index: number;
 }
 const FaqItem = ({ item, index }: FaqItemProps) => {
-  const [activeId, setActiveId] = useState(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
   const active = activeId === item.id;
   return (
     <div className="relative z-2 mb-16">
